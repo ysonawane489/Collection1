@@ -17,10 +17,12 @@ namespace Collection
             lst.Add(new Employee() { EmpId = 103, EmpName = "Mhaske", Address = "Nasik" });
             lst.Add(new Employee() { EmpId = 104, EmpName = "Shinde", Address = "Satara" });
 
-            foreach (Employee v in lst)
-            {
-                Console.WriteLine(v);
-            }
+            //foreach (Employee v in lst)
+            //{
+            //    Console.WriteLine(v);
+            //}
+            var query = from emp in lst select emp.EmpId;
+            Console.WriteLine(query);            
         }
     }
 }
